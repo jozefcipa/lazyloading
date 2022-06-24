@@ -6,4 +6,4 @@ serve:
 	./node_modules/.bin/http-server -c-1 ./example/
 
 generate:
-	node bin/generate-previews.js
+	node bin/generate-previews.js inputDir=$(inputDir) outputDir=$(outputDir)

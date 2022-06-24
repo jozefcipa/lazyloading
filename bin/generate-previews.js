@@ -30,8 +30,8 @@ function parseArgs(args) {
 
 
 ;(async (args) => {
-    const inputFolder = path.resolve(__dirname, args.inputFolder ?? '../example/images')
-    const outputFolder = path.resolve(__dirname, args.outputFolder ?? '../example/out')
+    const inputFolder = path.resolve(__dirname, '..', args.inputDir ?? './example/images')
+    const outputFolder = path.resolve(__dirname, '..', args.outputDir ?? './example/out')
 
     const images = (await fs.promises.readdir(inputFolder)).filter(isImage)
 
